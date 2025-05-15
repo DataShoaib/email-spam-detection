@@ -2,7 +2,17 @@ import streamlit as st
 import pickle
 from text_utils import clean_text
 import nltk
-nltk.download('punkt', quiet=True)
+from nltk.data import find
+from nltk import download
+
+def ensure_nltk_punkt():
+    try:
+        find('tokenizers/punkt')
+    except LookupError:
+        download('punkt')
+
+# App start hone se pehle punkt ensure karo
+ensure_nltk_punkt()
 
 # Sidebar me GitHub username, profile link aur contact info
 st.sidebar.markdown("### 👨‍💻 GitHub Username")
