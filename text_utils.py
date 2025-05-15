@@ -1,5 +1,6 @@
 
 import string
+import nltk
 from bs4 import BeautifulSoup
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
