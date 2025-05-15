@@ -1,15 +1,13 @@
 # text_utils.py
-
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
 from bs4 import BeautifulSoup
 import string
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-import nltk
 
-# Download required nltk data once (comment these lines after first run)
-nltk.download('punkt')
-nltk.download('stopwords')
 
 
 def clean_text(text):
