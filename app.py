@@ -1,7 +1,8 @@
 import streamlit as st
 import pickle
 from text_utils import clean_text
-
+import nltk
+nltk.download('punkt', quiet=True)
 
 # Sidebar me GitHub username, profile link aur contact info
 st.sidebar.markdown("### 👨‍💻 GitHub Username")
