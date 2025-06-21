@@ -2,21 +2,10 @@ import streamlit as st
 import pickle
 from text_utils import clean_text
 import nltk
-from nltk.data import find
-from nltk import download
 
-def ensure_nltk_dependencies():
-    try:
-        find('tokenizers/punkt')
-    except LookupError:
-        download('punkt')
-
-    try:
-        find('corpora/stopwords')
-    except LookupError:
-        download('stopwords')
-
-ensure_nltk_dependencies()
+#Direct download to prevent LookupError (punkt, stopwords)
+nltk.download('punkt')
+nltk.download('stopwords')
 
 st.sidebar.markdown("### 👨‍💻 GitHub Username")
 st.sidebar.write("[Dataahoaib](https://github.com/DataShoaib)")
