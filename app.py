@@ -5,21 +5,22 @@ import nltk
 from nltk.data import find
 from nltk import download
 
-def ensure_nltk_punkt():
+def ensure_nltk_dependencies():
     try:
         find('tokenizers/punkt')
     except LookupError:
         download('punkt')
 
+    try:
+        find('corpora/stopwords')
+    except LookupError:
+        download('stopwords')
 
-ensure_nltk_punkt()
-
+ensure_nltk_dependencies()
 
 st.sidebar.markdown("### 👨‍💻 GitHub Username")
 st.sidebar.write("[Dataahoaib](https://github.com/DataShoaib)")
-
 st.sidebar.markdown("---")
-
 st.sidebar.markdown("📫 Contact me: mdshoaiba478@gmail.com")
 
 with open('email_spam_detection.pkl', 'rb') as file:
