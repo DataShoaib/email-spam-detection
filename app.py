@@ -11,18 +11,17 @@ def ensure_nltk_punkt():
     except LookupError:
         download('punkt')
 
-# App start hone se pehle punkt ensure karo
+
 ensure_nltk_punkt()
 
-# Sidebar me GitHub username, profile link aur contact info
+
 st.sidebar.markdown("### 👨‍💻 GitHub Username")
 st.sidebar.write("[Dataahoaib](https://github.com/DataShoaib)")
 
-st.sidebar.markdown("---")  # ek horizontal line
+st.sidebar.markdown("---")
 
 st.sidebar.markdown("📫 Contact me: mdshoaiba478@gmail.com")
 
-# Model aur vectorizer load karna
 with open('email_spam_detection.pkl', 'rb') as file:
     model = pickle.load(file)
 
