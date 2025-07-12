@@ -52,6 +52,7 @@ A machine learning-powered web app to detect **spam emails** using advanced prep
 - **Pandas / NumPy**
 - **Streamlit**
 - **Joblib** (for saving models)
+- **nltk**
 
 ---
 
